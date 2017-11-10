@@ -1,0 +1,30 @@
+.container {
+  margin-top: 20px;
+  padding-bottom: 10px;
+  background-color: #F2F0E6;
+  font-family: 'Lobster', cursive; }
+
+.panelButtons {
+  margin: 2px;
+  float: right; }
+
+.form-control {
+  margin-top: 20px;
+  margin: auto;
+  font-family: arial; }
+
+#addButton {
+  margin-top: 15px; }
+
+#title {
+  margin-bottom: 30px;
+  text-align: center; }
+
+li {
+  font-family: arial;
+  font-size: 16px; }
+
+a {
+  font-size: 22px;
+  background-color: #F2F0E6;
+  cursor: pointer; }
