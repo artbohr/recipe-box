@@ -1,5 +1,8 @@
 # Recipe Box
 
+## Live Demo
+https://artbohr.github.io/recipe-box/
+
 ## Local Setup
 clone this repository and *run* these commands:
 
