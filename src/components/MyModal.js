@@ -37,7 +37,9 @@ class MyModal extends Component {
   editModalRecipe() {
     let recipes = this.props.recipeList;
     recipes[this.props.index].title = this.state.recipeValue2;
-    if (this.state.ingredientsValue2.length > 0) {
+    if (
+      this.state.ingredientsValue2 !== recipes[this.props.index].ingredients
+    ) {
       recipes[
         this.props.index
       ].ingredients = this.state.ingredientsValue2.split(",");
