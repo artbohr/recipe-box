@@ -48,20 +48,25 @@ class App extends Component {
 
   handleCreate(event) {
     event.preventDefault();
-    let newRecipe = this.state.recipes;
+    if (
+      this.state.recipeValue.length > 0 &&
+      /\w+/g.test(this.state.recipeValue)
+    ) {
+      let newRecipe = this.state.recipes;
 
-    newRecipe.push({
-      title: this.state.recipeValue,
-      ingredients: this.state.ingredientsValue.split(",")
-    });
+      newRecipe.push({
+        title: this.state.recipeValue,
+        ingredients: this.state.ingredientsValue.split(",")
+      });
 
-    localStorage.setItem("_artbohr_recipes", JSON.stringify(newRecipe));
+      localStorage.setItem("_artbohr_recipes", JSON.stringify(newRecipe));
 
-    this.setState({
-      recipes: newRecipe,
-      recipeValue: "",
-      ingredientsValue: ""
-    });
+      this.setState({
+        recipes: newRecipe,
+        recipeValue: "",
+        ingredientsValue: ""
+      });
+    }
   }
 
   deleteRecipe(index) {
